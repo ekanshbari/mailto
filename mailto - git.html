@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- <a href="mailto:ekanshbari@gmail.com; Ekansh.Bari-ext@bshg.com?subject=Important!&body=Hi">Send</a> -->  <!-- this is for static  -->
+    <button onclick="sendEmail()">mailto</button>    <!-- this is for dynamic -->
+  
+</body>
+
+<script>
+    // var body_message ="hi";
+    // var z = ["ekanshbari@gmail.com","Ekansh.Bari-ext@bshg.com"];
+
+// var email = z.join(';')
+// var subject = 'Extreme urgent taask!!!';
+// $('button').click(function() {
+
+//     var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + body_message;
+
+//     win = window.open(mailto_link, 'emailWindow');
+//     if (win && win.open && !win.closed) win.close();
+
+// });
+
+function sendEmail() {
+    var body_message ="hi";
+    var subject = 'Extreme urgent taask!!!';
+    var z = ["mail-1","mail-2"];
+    var mail = 'mailto:'+ z.join(';') + '?subject=' + subject + '&body=' + body_message;
+    var a = document.createElement('a');
+    a.href = mail;
+    a.click();
+};
+    </script>
+
+</html>
